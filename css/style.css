@@ -1,0 +1,51 @@
+:root {
+    --primary-bg-color: #00c0ca73;
+    --secondary-bg-color: #f2f2f2;
+    --box-shadow-1: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body > footer {
+    width:100%;
+    height: 4rem;
+    background-color: var(--primary-bg-color);
+    box-shadow: var(--box-shadow-1);
+}
+
+#log > p {
+    margin-bottom: 0;
+}
+
+#countries > div > img {
+    width: 100%;
+    height: 180px;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#countries > div > img:hover {
+    box-shadow: 0px 0 30px 0;
+}
+
+#detailsCasesDeaths {
+    max-height: 450px; 
+    overflow-y: scroll;
+}
+
+#detailsCasesDeaths::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+#detailsCasesDeaths::-webkit-scrollbar-thumb {
+    background-color: var(--primary-bg-color);
+}
+  

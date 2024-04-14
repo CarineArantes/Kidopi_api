@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icon/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>kidopi - Informativo Covid</title>
+</head>
+
+<body>
+  <div>
+    <div class="d-flex text-center mt-5 pt-5 row" style="--bs-gutter-x: 0; ">
+      <h1>Informes sobre casos de morte por Covid</h1>
+      <h3>Selecione um dos países abaixo:</h3>
+    </div>
+
+    <div id="countries" class="d-flex justify-content-center flex-wrap mt-5 pt-5 grid gap-4">
+      <div id="Australia" style="width: 18rem;">
+        <img src="assets/img/australia.png" alt="Imagem da badeira da Australia" onclick="handleClick('Australia')">
+      </div>
+
+      <div id="Brazil" style="width: 18rem;">
+        <img src="assets/img/brasil.png" alt="Imagem da badeira do Brasil" onclick="handleClick('Brazil')">
+      </div>
+
+      <div id="Canada" style="width: 18rem;">
+        <img src="assets/img/canada.png" alt="Imagem da badeira do Canada" onclick="handleClick('Canada')">
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: auto; min-width: 700px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="modal-body" class="modal-body">
+            <div class="d-flex gap-2">
+              <div class="card w-50">
+                <div class="card-body">
+                  <h5 class="card-title">Total de Casos Confirmados</h5>
+                  <p id="totalConfirmedCases" class="card-text"></p>
+                </div>
+              </div>
+              <div class="card w-50">
+                <div class="card-body">
+                  <h5 class="card-title">Total de Óbitos Confirmados</h5>
+                  <p id="totalConfirmedDeaths" class="card-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-100 mt-2 ">
+              <div class="card-body">
+                <h5 class="card-title">Resumo de casos e óbitos</h5>
+                <div class="d-flex w-100 pe-3">
+                  <div class="w-50">
+                    <span>
+                      Região
+                    </span>
+                  </div>
+                  <div class="d-flex w-50 justify-content-between">
+                    <span>
+                      Casos
+                    </span>
+                    <span>
+                      Óbitos
+                    </span>
+                  </div>
+                </div>
+                <div id="detailsCasesDeaths" class="pe-3">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="d-flex w-100 px-4 py-3 fixed-bottom justify-content-center align-items-center">
+    <div id="log" class="d-flex">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/site.js"></script>
+
+</body>
+
+</html>
